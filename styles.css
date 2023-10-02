@@ -1,69 +1,83 @@
+/* Reset Styling */
 body {
-    font-family: "Nimbus Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-/*--- Fonts ---*/
-@font-face {
-    font-family: "Nimbus Sans";
-    src: url("assets/fonts/NimbusSanL-Reg.otf") format("opentype");
+  font-family: "Nimbus Sans", sans-serif;
+  margin: 0;
+  background-color: #323232;
+  color: #c2c1ba;
 }
 
-/*--- Header & Navigation ---*/
-  
-  header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  header nav li {
-    margin-right: 2rem;
-  }
-  
-   header nav a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  header nav a:hover {
-    color: #c4c4cf;
-  }
-  
-  main {
-    display:flex;
+/* Fonts */
+@font-face {
+  font-family: "Nimbus Sans";
+  src: url("assets/fonts/NimbusSanL-Reg.otf") format("opentype");
+}
+
+/* Header & Navigation */
+header nav ul.nav-menu {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+}
+
+header nav li {
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 40px;
+  border-right: 1px solid #c2c1ba;
+}
+
+header nav li:last-child {
+  border-right: none;
+}
+
+header nav a {
+  color: #c2c1ba;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
+  color: #b3c5c9;
+}
+
+nav {
+  border: 1px solid #c2c1ba;
+  padding: 10px;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero Styling */
+.hero-main h1 {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 30px;
+  color: #e8e6e5;
+}
+
+.hero-main p {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #323232;
+  border: 1px solid #c2c1ba;
+  margin: 30px;
+  text-align: center;
+}
+
+/* Responsive Styling (Mobile & Tablet) */
+@media only screen and (max-width: 600px) {
+  header nav ul.nav-menu {
     flex-direction: column;
-    align-items: center;
-    padding: 2rem;
   }
-  
-  .hero-main h1 {
-    margin-bottom: 2rem;
+  main {
+    flex-grow: 1;
   }
-  
-  .hero-main p {
-    font-size: 1.2rem;
-  }
-
-/*--- Footer ---*/
-  
-  footer {
-    background-color: #f2f2f2;
-    padding: 1rem;
-    text-align: center;
-  }
-
-/*--- Mobile & Tablet ---*/
-  
-  @media only screen and (max-width: 600px) {
-    header nav ul {
-      flex-direction: columns;
-    }
-    main {
-      flex-grow: 1;
-    }
-  }
+}
