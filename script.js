@@ -48,3 +48,10 @@ User.getAllUsers().then((users) => console.log(users));
 User.registerNewUserAccount("new_username", "new_password").then((data) =>
   console.log(data)
 );
+
+// Toggling dark mode
+const checkBox = document.getElementById('switch');
+checkBox.addEventListener('change', () => {
+   document.body.classList.toggle('dark-theme');
+});
+
